@@ -1,7 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { getProject } from "@/data/Projects";
+// import { getProject } from "@/data/Projects";
+import {getProject} from "@/data/projects";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
