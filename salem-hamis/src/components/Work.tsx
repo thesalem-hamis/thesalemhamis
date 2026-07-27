@@ -235,7 +235,6 @@
 //   );
 // }
 
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Reveal } from "./Reveal";
 import { projects, Project } from "@/data/projects";
@@ -262,11 +261,6 @@ export function Work() {
     <>
       <style>{`
         @keyframes gridPulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
-        @keyframes progressLoading {
-          0% { transform: translateX(-100%); }
-          50% { transform: translateX(0%); }
-          100% { transform: translateX(100%); }
-        }
 
         .work-img { transition: transform 0.8s cubic-bezier(0.22,1,0.36,1); }
         .work-card:hover .work-img { transform: scale(1.02); }
@@ -276,9 +270,6 @@ export function Work() {
         }
         .work-card:hover {
           transform: translateY(-4px);
-        }
-        .animate-progress {
-          animation: progressLoading 1.5s ease-in-out infinite;
         }
       `}</style>
 
@@ -350,7 +341,6 @@ export function Work() {
 
 function BentoCard({ project: p }: { project: Project }) {
   const navigate = useNavigate();
-  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <div
@@ -364,29 +354,12 @@ function BentoCard({ project: p }: { project: Project }) {
           style={{ borderColor: "rgba(255, 255, 255, 0.25)" }}
         >
           <div className="relative overflow-hidden rounded-lg bg-white/5 w-full min-h-[180px]">
-            {/* ── Skeleton Loader & Progress Bar ── */}
-            {!isLoaded && (
-              <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 bg-[#141414] animate-pulse">
-                <div className="flex items-center justify-between">
-                  <div className="h-2 w-16 bg-white/10 rounded-full" />
-                  <div className="h-2 w-8 bg-white/10 rounded-full" />
-                </div>
-
-                <div className="w-full bg-white/10 h-1 rounded-full overflow-hidden relative">
-                  <div className="absolute inset-0 bg-white/40 animate-progress rounded-full" />
-                </div>
-              </div>
-            )}
-
             {/* ── Image Only ── */}
             <img
               src={p.heroImage}
               alt={p.title}
               loading="lazy"
-              onLoad={() => setIsLoaded(true)}
-              className={`work-img w-full h-auto block rounded-md transition-opacity duration-500 ${
-                isLoaded ? "opacity-100" : "opacity-0"
-              }`}
+              className="work-img w-full h-auto block rounded-md"
             />
           </div>
         </div>
