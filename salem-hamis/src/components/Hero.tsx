@@ -123,10 +123,10 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* ── Massive headline ── */}
+        {/* ── Massive headline (Slightly reduced font size) ── */}
         <h1
           className="font-display leading-[0.93] tracking-[-0.03em] mb-10"
-          style={{ fontSize: "clamp(3rem, 9.5vw, 7rem)" }}
+          style={{ fontSize: "clamp(2.75rem, 8vw, 5.5rem)" }}
         >
           {lines.map((ln, li) => {
             let globalIdx = lines.slice(0, li).reduce((a, l) => a + l.length, 0);
@@ -205,7 +205,7 @@ export function Hero() {
               transition: "color 0.3s ease, text-shadow 0.3s ease"
             }}
           >
-            I build modern, smart websites for businesses and brands —
+            I build modern, smart websites for businesses and brands 
             blending editorial design with precise frontend engineering.
           </motion.p>
         </motion.div>

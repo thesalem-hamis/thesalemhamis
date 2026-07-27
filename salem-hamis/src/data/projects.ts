@@ -6,101 +6,145 @@ export type Project = {
   stack: string[];
   year: string;
   href: string;
+  client?: string;
+  duration?: string;
+  timeframe?: string;
   overview: string;
   challenge: string;
   solution: string;
   outcome: string;
   heroImage: string;
+  heroVideo?: string; // Optional video hero for case study pages
   gallery: string[];
 };
 
 export const projects: Project[] = [
   {
-    id: "maison-reserve",
-    title: "Maison Reserve",
-    tagline: "Luxury reservation platform for hotels, restaurants, and lounges.",
-    industry: "Hospitality",
-    stack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    year: "2024",
-    href: "#",
+    id: "vivar-realty-global",
+    title: "Vivar Realty Global",
+    tagline:
+      "Enterprise real estate platform with an integrated CRM, lead management, and business intelligence dashboard.",
+    industry: "Real Estate Technology",
+    stack: ["Next.js", "React", "Node.js", "Tailwind CSS", "MongoDB"],
+    year: "2026",
+    href: "https://www.vivar.global",
+    client: "Vivar Global",
+    duration: "4 Weeks",
+
     overview:
-      "Maison Reserve is a luxury reservation platform built for high-end hotels, restaurants, and private lounges. The goal was to create a digital experience that matched the physical elegance of the brand — calm, confident, and effortlessly premium.",
+      "Vivar Realty Global is a modern real estate platform built to simplify property discovery while providing administrators with complete control over business operations. Beyond a polished customer-facing experience, the platform includes a fully custom CRM that allows staff to manage listings, publish blog content, track enquiries, automate lead responses, and monitor business performance from one centralized dashboard. Every workflow was designed around the client's operations instead of relying on generic third-party software.",
+
     challenge:
-      "The client had an outdated booking flow that was losing conversions on mobile. The brand identity was strong offline but completely absent in their digital presence.",
+      "The client had outgrown traditional website builders and disconnected management tools. Property updates required unnecessary manual effort, customer enquiries were scattered across multiple channels, and there was no reliable way to monitor marketing performance or website activity. They needed a scalable platform capable of supporting both customer acquisition and internal operations.",
+
     solution:
-      "We redesigned the entire booking journey from scratch — starting with a deep brand audit, then building a custom design system in Figma before writing a single line of code. The frontend was built in Next.js with fluid Framer Motion transitions on every interaction.",
+      "We designed and developed a complete digital ecosystem combining a high-performance real estate website with a powerful administrative CRM. Administrators can manage property listings, publish articles, capture and organize leads, trigger automated email responses, and analyze visitor behaviour through integrated reporting. The platform was engineered to minimize repetitive work while giving the business complete ownership of its data.",
+
     outcome:
-      "Mobile conversions increased by 38% in the first month. Bounce rate dropped significantly and the client reported consistent praise from customers about the booking experience.",
-    heroImage: "/src/assets/work-hospitality.jpg",
+      "The finished platform transformed Viva Realty Global into a fully digital real estate operation. Listing management became significantly faster, customer response times improved through automation, and the business gained real-time visibility into lead generation and website performance. The system now provides a scalable foundation capable of supporting future growth without dependence on external management platforms.",
+
+    heroImage: "/src/assets/vivar-home.png", 
+    heroVideo: "/src/assets/vivar.mp4", 
+
     gallery: [
-      "/src/assets/work-hospitality.jpg",
-      "/src/assets/work-realestate.jpg",
+      "/src/assets/vivar-admin.png",
+      "/src/assets/vivar-home.png",
     ],
   },
   {
-    id: "northline-estates",
-    title: "Northline Estates",
-    tagline: "Modern property showcase with premium branding and listings.",
-    industry: "Real Estate",
-    stack: ["Next.js", "GSAP", "Mapbox", "Tailwind CSS"],
-    year: "2024",
-    href: "#",
+    id: "rhace-co",
+    title: "Rhace.co",
+    tagline:
+      "A unified hospitality marketplace connecting restaurants, hotels, nightlife, and events through one intelligent platform.",
+    industry: "Hospitality Technology",
+    stack: ["Next.js", "React", "Node.js", "Tailwind CSS", "MongoDB"],
+    year: "2026",
+    href: "https://rhace-frontend.vercel.app",
+    client: "Rhace Inc.",
+    duration: "5 Months",
+
     overview:
-      "Northline Estates needed a property showcase that felt as premium as the homes they were selling. The brief was simple: make it feel like a luxury magazine, not a property portal.",
+      "Rhace.co is a multi-vendor hospitality marketplace designed to bring restaurants, lounges, hotels, clubs, and live events together within a single digital ecosystem. Customers can reserve tables, purchase event tickets, book hotel rooms, browse menus, and complete secure payments from one seamless platform, while vendors receive powerful business management tools through dedicated dashboards.",
+
     challenge:
-      "Real estate sites are notoriously cluttered and data-heavy. The challenge was balancing rich listing information with a clean, editorial visual language.",
+      "Creating a platform capable of serving multiple business categories introduced significant architectural complexity. Restaurants, hotels, event organizers, and nightlife venues each required different operational workflows, yet customers expected one fast and intuitive experience. Traditional marketplace wallet systems also created payout delays and accounting overhead that negatively affected vendors.",
+
     solution:
-      "We stripped the UI down to its essentials and let the photography do the work. GSAP scroll animations give each listing a cinematic reveal. Mapbox integration shows location context without leaving the page.",
+      "Instead of implementing a conventional wallet system, we engineered an automated split-payment infrastructure that securely distributes payments to participating vendors after a controlled settlement period. Alongside this payment engine, we developed vendor dashboards for reservation management, menu administration, sales reporting, customer analytics, inventory visibility, and operational insights while maintaining a frictionless customer journey.",
+
     outcome:
-      "The site became a key sales tool — agents now use it directly in client meetings. Average session time doubled compared to the previous site.",
-    heroImage: "/src/assets/work-realestate.jpg",
+      "Rhace successfully unified multiple hospitality services into one connected platform. Vendors benefited from automated settlements, improved operational visibility, and simplified business management, while customers enjoyed a faster booking experience across restaurants, hotels, events, and nightlife. The platform established a scalable foundation capable of supporting continued expansion across the hospitality industry.",
+
+    heroImage: "/src/assets/rhace.png", 
+    heroVideo: "/src/assets/rhace-main.mp4", 
+
     gallery: [
-      "/src/assets/work-realestate.jpg",
-      "/src/assets/work-hospitality.jpg",
+      "/src/assets/rhace-2.png",
+      "/src/assets/rhace-3.png",
     ],
   },
   {
-    id: "studio-method",
-    title: "Studio Method",
-    tagline: "Minimal conversion-focused educational landing page.",
-    industry: "Education",
-    stack: ["React", "Tailwind CSS", "Stripe"],
-    year: "2024",
-    href: "#",
+    id: "rhace-back-office",
+    title: "Rhace Back Office",
+    tagline:
+      "An enterprise restaurant operating system powering staff, inventory, payments, and real-time business operations.",
+    industry: "Restaurant SaaS",
+    stack: ["React", "Node.js", "Tailwind CSS", "MongoDB"],
+    year: "2026",
+    href: "https://back-office.rhace.co",
+    client: "Rhace Inc.",
+    duration: "5 Months",
+
     overview:
-      "Studio Method is an online education platform for creative professionals. The landing page needed to communicate credibility, drive course sign-ups, and handle payments — all in one clean, fast experience.",
+      "Rhace Back Office serves as the operational engine behind the Rhace ecosystem. Built specifically for modern restaurant operations, it centralizes staff management, inventory tracking, live order monitoring, payment processing, customer analytics, and executive reporting within one secure management platform.",
+
     challenge:
-      "The founder had tried two previous designs that looked good but didn't convert. The page needed to earn trust quickly and make the purchase decision feel easy.",
+      "Restaurant environments require multiple teams to work simultaneously under constant time pressure. Waiters, supervisors, inventory managers, accountants, and business owners all require different permission levels while interacting with the same operational data. The challenge was building a highly responsive platform without compromising security or usability.",
+
     solution:
-      "We focused everything on the conversion path — clear hierarchy, social proof positioned at key scroll points, and a frictionless Stripe checkout embedded directly on the page.",
+      "We developed a role-based operating system featuring granular access control, live kitchen order management, inventory monitoring, payment oversight, customer insights, employee administration, and business intelligence dashboards. Every module was optimized for speed, allowing restaurant staff to perform daily operations efficiently during peak service hours.",
+
     outcome:
-      "Sign-up rate improved by 52% over the previous design. The founder reported the new page paid for itself within the first week of launch.",
-    heroImage: "/src/assets/work-course.jpg",
+      "The platform replaced fragmented manual workflows with a centralized digital operating system that improved staff collaboration, reduced inventory inaccuracies, simplified reporting, and gave management complete visibility into restaurant performance through real-time operational analytics.",
+
+    heroImage: "/src/assets/vivar-home.png", 
+    heroVideo: "/src/assets/rhace-backoffice.mp4", 
+
     gallery: [
-      "/src/assets/work-course.jpg",
-      "/src/assets/work-restaurant.jpg",
+      "/src/assets/rhace-backoffice.png",
+      "/src/assets/backoffice.png",
     ],
   },
   {
-    id: "nori-restaurant",
-    title: "Nori Restaurant",
-    tagline: "Clean reservation-focused experience for a modern kitchen.",
-    industry: "Restaurant",
-    stack: ["Next.js", "Resend", "OpenTable"],
-    year: "2024",
-    href: "#",
+    id: "rhace-customer",
+    title: "Rhace Customer App",
+    tagline:
+      "A QR-powered dining experience enabling instant ordering, seamless payments, and effortless group bill splitting.",
+    industry: "Consumer Hospitality Technology",
+    stack: ["React", "Next.js", "Tailwind CSS", "Node.js"],
+    year: "2026",
+    href: "https://customer.rhace.co",
+    client: "Rhace Inc.",
+    duration: "3 Months",
+
     overview:
-      "Nori is a modern Japanese kitchen that needed a website as considered as their food. The focus was on reservations, ambience, and menu — in that order.",
+      "The Rhace Customer App transforms the restaurant dining experience by allowing guests to order directly from their table through QR technology. Customers can browse digital menus, submit orders instantly to the kitchen, split bills among friends, and complete payments without waiting for traditional table service. The application integrates seamlessly with Rhace Back Office to provide real-time synchronization across restaurant operations.",
+
     challenge:
-      "Restaurant websites often feel either too flashy or too plain. Nori needed something in between — warm, minimal, and fast on mobile where most diners would land.",
+      "Traditional dining experiences often suffer from ordering delays, communication errors between staff and kitchens, and frustrating group payment processes. Building a seamless customer experience required instant synchronization between customer actions and restaurant operations while supporting complex split-payment scenarios.",
+
     solution:
-      "We built around the reservation CTA first, then layered in the brand story through typography and photography. OpenTable integration keeps the booking flow native. Resend handles confirmation emails with branded templates.",
+      "We created a lightweight QR-powered web application requiring no installation. Guests can instantly access restaurant menus, customize orders, request additional items, split payments by item or percentage, and complete transactions while every interaction synchronizes directly with kitchen displays and the Rhace Back Office management system.",
+
     outcome:
-      "Reservation volume through the website increased by 60% in the first two months. The owner described it as the first time their website actually felt like part of the restaurant.",
-    heroImage: "/src/assets/work-restaurant.jpg",
+      "The application reduced ordering delays, minimized payment confusion, improved kitchen communication, and significantly enhanced the customer dining experience. Together with Rhace Back Office, it created a fully connected restaurant ecosystem that modernized both front-of-house and back-office operations.",
+
+    heroImage: "/src/assets/vivar-home.png", 
+    heroVideo: "/src/assets/rhace-customer.mp4", 
+
     gallery: [
-      "/src/assets/work-restaurant.jpg",
-      "/src/assets/work-course.jpg",
+      "/src/assets/rhace-cutomer.png",
+      // "/src/assets/work-restaurant.jpg",
     ],
   },
 ];

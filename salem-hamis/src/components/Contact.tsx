@@ -137,7 +137,7 @@ export function Contact() {
                 text-balance
               "
               style={{
-                fontSize: "clamp(3.5rem, 9vw, 7rem)",
+                fontSize: "clamp(2.5rem, 6.5vw, 5rem)",
                 lineHeight: 0.9,
                 letterSpacing: "-0.065em",
                 fontWeight: 500,
@@ -166,7 +166,7 @@ export function Contact() {
               <br />
               Designed to make your brand stand out and convert. */}
               A modern landing page, a full product experience,
-              or a brand refresh — I build clean digital experiences
+              or a brand refresh. I build clean digital experiences
               designed to stand out and convert.
             </p>
 
