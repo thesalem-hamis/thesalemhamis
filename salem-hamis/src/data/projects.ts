@@ -75,12 +75,14 @@ export const projects: Project[] = [
     outcome:
       "Rhace successfully unified multiple hospitality services into one connected platform. Vendors benefited from automated settlements, improved operational visibility, and simplified business management, while customers enjoyed a faster booking experience across restaurants, hotels, events, and nightlife. The platform established a scalable foundation capable of supporting continued expansion across the hospitality industry.",
 
-    heroImage: "/src/assets/rhace.png", 
+    heroImage: "/src/assets/finalrhace.png", 
     heroVideo: "/src/assets/rhace-main.mp4", 
 
     gallery: [
+      "/src/assets/finalrhace.png",
       "/src/assets/rhace-2.png",
       "/src/assets/rhace-3.png",
+      "/src/assets/rhace-backoffice.png",
     ],
   },
   {
@@ -107,11 +109,11 @@ export const projects: Project[] = [
     outcome:
       "The platform replaced fragmented manual workflows with a centralized digital operating system that improved staff collaboration, reduced inventory inaccuracies, simplified reporting, and gave management complete visibility into restaurant performance through real-time operational analytics.",
 
-    heroImage: "/src/assets/vivar-home.png", 
-    heroVideo: "/src/assets/rhace-backoffice.mp4", 
+    heroImage: "/src/assets/backoffice.png", 
+    heroVideo: "/src/assets/main-rhace-backoffice.mp4", 
 
     gallery: [
-      "/src/assets/rhace-backoffice.png",
+      "/src/assets/mainbackoffice.png",
       "/src/assets/backoffice.png",
     ],
   },
@@ -139,7 +141,7 @@ export const projects: Project[] = [
     outcome:
       "The application reduced ordering delays, minimized payment confusion, improved kitchen communication, and significantly enhanced the customer dining experience. Together with Rhace Back Office, it created a fully connected restaurant ecosystem that modernized both front-of-house and back-office operations.",
 
-    heroImage: "/src/assets/vivar-home.png", 
+    heroImage: "/src/assets/rhace-cutomer.png", 
     heroVideo: "/src/assets/rhace-customer.mp4", 
 
     gallery: [
